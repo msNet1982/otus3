@@ -26,6 +26,7 @@
 <script setup>
     import { ref } from "vue"
     import { useRouter } from "vue-router"
+    import { isAuth } from "../composables"
 
     const router = useRouter()
 
@@ -34,10 +35,12 @@
     const isError = ref(false)
 
     localStorage.setItem('login', false)
+    isAuth.value = false
 
     function auth() {
         if (login.value && password.value) {
             localStorage.setItem('login', true)
+            isAuth.value = true
             router.push({name: 'Index'})
         }
         else isError.value = true
