@@ -14,7 +14,6 @@
     import { ref } from 'vue' 
     import { isAuth } from '../composables'
     import Input from './Input.vue'
-    import ModalSendOrder from './ModalSendOrder.vue'
 
     const searchTitle = defineModel('searchTitle')
     const searchMaxPrice = defineModel('searchMaxPrice')
