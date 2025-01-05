@@ -6,8 +6,6 @@
         <Input text="Поиск по названию" customType="text" class="btn" v-model="searchTitle" />
         <Input text="Максимальная цена" customType="number" class="btn" v-model="searchMaxPrice" />
     </div>
-
-    <ModalSendOrder v-if="isShowSendOrder" :isShowSendOrder="isShowSendOrder" @closeModal="isShowSendOrder=false" />
 </template>
 
 <script setup>
